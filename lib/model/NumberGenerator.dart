@@ -1,7 +1,6 @@
 import 'dart:math';
 
 class NumberGenerator{
-
   /// 로또번호는 한 리스트에 중복이 없기에 Set으로 선언 */
   List<int> generateNumberList(){
     Set<int> _numberSet = new Set();
