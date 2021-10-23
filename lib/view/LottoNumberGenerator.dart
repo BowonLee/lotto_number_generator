@@ -16,6 +16,8 @@ class LottoNumberGenerator extends StatelessWidget {
           title: Text("제발 한번만요..."),
         ),
         body: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Column(
               children: [
@@ -23,14 +25,14 @@ class LottoNumberGenerator extends StatelessWidget {
                   child: Text("Generated Numbers"),
                 ),
                 drawNumberContainer(_flexibleList),
-                drawGenrateNumberButtonContainer()
+                drawGenerateNumberButtonContainer()
               ],
             )
           ],
         ));
   }
 
-  Container drawGenrateNumberButtonContainer() {
+  Container drawGenerateNumberButtonContainer() {
     return Container(
       child: Center(
         child: _drawNumGenerateButton(),
@@ -40,6 +42,10 @@ class LottoNumberGenerator extends StatelessWidget {
 
   Container drawNumberContainer(List<Flexible> _flexibleList) {
     return Container(
+      margin: EdgeInsets.only(
+        top: 20.0,
+        bottom: 20.0,
+      ),
       child: Row(children: [..._flexibleList]),
     );
   }
